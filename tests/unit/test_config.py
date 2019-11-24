@@ -1,4 +1,3 @@
-import os
 from pathlib import Path
 from tempfile import NamedTemporaryFile, TemporaryDirectory
 from textwrap import dedent
@@ -172,7 +171,7 @@ def test_ini_writer():
 
 
 @pytest.mark.parametrize(
-    ("writer_cls", "data"), [(IniWriter, {}), (JsonWriter, {}), (YamlWriter, {}),],
+    ("writer_cls", "data"), [(IniWriter, {}), (JsonWriter, {}), (YamlWriter, {})],
 )
 def test_writer_creates_dir(writer_cls, data):
     with TemporaryDirectory() as directory:

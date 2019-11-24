@@ -65,7 +65,10 @@ class NestedTemplate(Template):
 
 def serialize_to_dict(obj):  # type: ignore
     if isinstance(obj, Template):
-        return {field: serialize_to_dict(getattr(obj, field)) for field in sorted(obj.fields)}
+        return {
+            field: serialize_to_dict(getattr(obj, field))
+            for field in sorted(obj.fields)
+        }
     elif isinstance(obj, (list, set, tuple)):
         cls = type(obj)
         return cls([serialize_to_dict(o) for o in obj])

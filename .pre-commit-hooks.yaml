@@ -3,6 +3,6 @@
   description: "Small library to treat configuration as code (inheritance, templates, modifiers, tests, etc.)"
   entry: python -m precommit
   language: python
-  language_version: python3
+  language_version: python3.8
   require_serial: true
   types: [python]

@@ -1,0 +1,6 @@
+section:
+  field: correct
+  other_field: true
+some_other_item: hello
+version: 43
+will_be_modified: 100
